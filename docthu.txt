@@ -1,0 +1,16 @@
+- Ma ruou :1
+- Ten san pham :2
+- Xuat xu :3
+- Dung tich :4
+- Nong do :5
+- Gia ban :6
+- So Luong :7
+##########
+- Ma ruou :2
+- Ten san pham :8
+- Xuat xu :9
+- Dung tich :11
+- Nong do :12
+- Gia ban :13
+- So Luong :14
+##########

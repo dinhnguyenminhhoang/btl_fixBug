@@ -1,0 +1,36 @@
+
+- Ma ruou :1
+- Ten san pham :1
+- Xuat xu :1
+- Dung tich :1
+- Nong do :1
+- Gia ban :1
+##########
+- Ma ruou :0
+- Ten san pham :2
+- Xuat xu :2
+- Dung tich :2
+- Nong do :2
+- Gia ban :2
+##########
+- Ma ruou :3
+- Ten san pham :3
+- Xuat xu :3
+- Dung tich :3
+- Nong do :4
+- Gia ban :4
+##########
+- Ma ruou :1
+- Ten san pham :1
+- Xuat xu :1
+- Dung tich :1
+- Nong do :1
+- Gia ban :1
+##########
+- Ma ruou :0
+- Ten san pham :2
+- Xuat xu :2
+- Dung tich :2
+- Nong do :2
+- Gia ban :2
+##########
