@@ -1,25 +1,56 @@
-- Ma ruou :3
-- Ten san pham :3
-- Xuat xu :3
-- Dung tich :4
-- Nong do :4
-- Gia ban :4
-- So luong :4
-- So luong mua :6
-##########
-- Ma ruou :1
-- Ten san pham :1
-- Xuat xu :1
-- Dung tich :2
-- Nong do :3
-- Gia ban :4
-- So Luong :0
-##########
-- Ma ruou :0
-- Ten san pham :1
+- Ma ruou :2
+- Ten san pham :2
 - Xuat xu :2
 - Dung tich :3
-- Nong do :4
+- Nong do :2
+- Gia ban :2
+- So luong :2
+##########
+- Ma ruou :1
+- Ten san pham :3
+- Xuat xu :3
+- Dung tich :3
+- Nong do :3
+- Gia ban :3
+- So luong :8
+##########
+- Ma ruou :1
+- Ten san pham :3
+- Xuat xu :3
+- Dung tich :2
+- Nong do :3
+- Gia ban :3
+- So luong :3
+##########
+- Ma ruou :2
+- Ten san pham :4
+- Xuat xu :6
+- Dung tich :5
+- Nong do :5
+- Gia ban :4
+- So luong :6
+##########
+- Ma ruou :3
+- Ten san pham :5
+- Xuat xu :5
+- Dung tich :4
+- Nong do :5
 - Gia ban :5
-- So Luong :0
+- So luong :5
+##########
+- Ma ruou :1
+- Ten san pham :9
+- Xuat xu :8
+- Dung tich :6
+- Nong do :8
+- Gia ban :9
+- So luong :7
+##########
+- Ma ruou :3
+- Ten san pham :8
+- Xuat xu :8
+- Dung tich :3
+- Nong do :10
+- Gia ban :12
+- So luong :12
 ##########

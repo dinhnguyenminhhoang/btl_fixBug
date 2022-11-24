@@ -116,6 +116,7 @@ public:
 		this->data.xuatxu = "";
 		//	this->data.giaban=0;
 		this->data.soluong = 0;
+		this->soluongcanmua = 0;
 	}
 
 	void inputdata(int x, int y);
@@ -128,6 +129,7 @@ public:
 		this->data.tensp = a->data.tensp;
 		this->data.nongdo = a->data.nongdo;
 		this->data.soluong = a->data.soluong;
+		this->soluongcanmua = a->soluongcanmua;
 		//	return *this;
 	}
 	void nhapdulieunhieucot(node *head, int x, int t, int sobang);
@@ -161,6 +163,7 @@ void swapdata(node *&a, node *&b)
 	temp->data.nongdo = a->data.nongdo;
 	temp->data.giaban = a->data.giaban;
 	temp->data.soluong = a->data.soluong;
+	temp->soluongcanmua = a->soluongcanmua;
 
 	a->data.ma = b->data.ma;
 	a->data.tensp = b->data.tensp;
@@ -169,6 +172,7 @@ void swapdata(node *&a, node *&b)
 	a->data.nongdo = b->data.nongdo;
 	a->data.giaban = b->data.giaban;
 	a->data.soluong = b->data.soluong;
+	a->soluongcanmua = b->soluongcanmua;
 
 	b->data.ma = temp->data.ma;
 	b->data.tensp = temp->data.tensp;
@@ -177,6 +181,7 @@ void swapdata(node *&a, node *&b)
 	b->data.nongdo = temp->data.nongdo;
 	b->data.giaban = temp->data.giaban;
 	b->data.soluong = temp->data.soluong;
+	b->soluongcanmua = temp->soluongcanmua;
 }
 void node::printTheoHang(int x, int y)
 {

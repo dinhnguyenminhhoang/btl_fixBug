@@ -255,8 +255,8 @@ void SaveFileDATAtemp(node *a)
 				<< "- Gia ban :" << head->getgiaban();
 		FileOut << endl
 				<< "- So luong :" << head->getSoLuong();
-		FileOut << endl
-				<< "- So luong mua :" << head->getsoluongcanmua();
+		// FileOut << endl
+		// 		<< "- So luong can mua :" << head->getsoluongcanmua();
 		// FileOut << endl << "- Vi tri : " << a.m_Vitri;
 		FileOut << endl
 				<< "##########" << endl;
@@ -285,8 +285,8 @@ void SaveFileGioHang(node *a)
 				<< "- Gia ban :" << head->getgiaban();
 		FileOut << endl
 				<< "- So luong :" << head->getSoLuong();
-		FileOut << endl
-				<< "- So luong mua :" << head->getsoluongcanmua();
+		// FileOut << endl
+		// 		<< "- So luong can mua :" << head->getsoluongcanmua();
 		FileOut << endl
 				<< "##########" << endl;
 		head = head->next;
@@ -471,6 +471,30 @@ void TimTheoMa(node *&head, string ma, node *&GioHang)
 			{
 				GioHang = copy;
 				tempGioHang->next = NULL;
+				gotoxy(18, 12);
+				cout << "da tim san pham vui long nhap so luong can mua: ";
+				do
+				{
+					displaybox(18, 13, 3, 20);
+					gotoxy(20, 14);
+					cin >> temp->soluongcanmua;
+					if (temp->getSoLuong() < temp->soluongcanmua)
+					{
+						gotoxy(18, 18);
+						cout << "SO LUONG CAN MUA VUOT QUA SO LUONG CO TRONG KHO VUI LONG NHAP LAI";
+					}
+					else if (temp->soluongcanmua <= 0)
+					{
+						gotoxy(18, 18);
+						cout << "SO LUONG CAN MUA PHAI LON HON HOAC BANG 1";
+					}
+					else if (temp->getSoLuong() > temp->soluongcanmua)
+					{
+						gotoxy(18, 18);
+						cout << "CHON SAN PHAM THANH CONG VUI LONG XEM O GIO HANG";
+					}
+
+				} while (temp->getSoLuong() < temp->soluongcanmua || temp->soluongcanmua <= 0);
 			}
 			else
 			{
@@ -480,77 +504,38 @@ void TimTheoMa(node *&head, string ma, node *&GioHang)
 				}
 				tempGioHang->next = copy;
 				copy->next = NULL;
+				gotoxy(18, 12);
+				cout << "da tim san pham vui long nhap so luong can mua: ";
+				do
+				{
+					displaybox(18, 13, 3, 20);
+					gotoxy(20, 14);
+					cin >> temp->soluongcanmua;
+					if (temp->getSoLuong() < temp->soluongcanmua)
+					{
+						gotoxy(18, 18);
+						cout << "SO LUONG CAN MUA VUOT QUA SO LUONG CO TRONG KHO VUI LONG NHAP LAI";
+					}
+					else if (temp->soluongcanmua <= 0)
+					{
+						gotoxy(18, 18);
+						cout << "SO LUONG CAN MUA PHAI LON HON HOAC BANG 1";
+					}
+					else if (temp->getSoLuong() > temp->soluongcanmua)
+					{
+						gotoxy(18, 18);
+						cout << "CHON SAN PHAM THANH CONG VUI LONG XEM O GIO HANG";
+					}
+
+				} while (temp->getSoLuong() < temp->soluongcanmua || temp->soluongcanmua <= 0);
 			}
 			head->deletenode(head, i);
-			gotoxy(0, 6);
-			cout << "da tim thay";
 			break;
 		}
 		i++;
 		temp = temp->next;
 	}
 }
-
-// void TimTheoMa(node *&head, string ma, node *&GioHang)
-// {
-// 	node *temp = new node;
-// 	node *tempGioHang = new node;
-// 	tempGioHang = GioHang;
-// 	int i = 1;
-// 	node *copy = new node;
-// 	temp = head;
-// 	while (temp != NULL)
-// 	{
-// 		if (ma == temp->data.ma)
-// 		{
-// 			copy->copy(temp);
-// 			if (tempGioHang == NULL)
-// 			{
-// 				GioHang = copy;
-// 				tempGioHang->next = NULL;
-// 			}
-// 			else
-// 			{
-// 				while (tempGioHang->next != NULL)
-// 				{
-// 					tempGioHang = tempGioHang->next;
-// 				}
-// 				tempGioHang->next = copy;
-// 				copy->next = NULL;
-// 			}
-// 			head->deletenode(head, i);
-
-// 			gotoxy(18, 12);
-// 			cout << "da tim san pham vui long nhap so luong can mua: ";
-// 			do
-// 			{
-// 				displaybox(18, 13, 3, 20);
-// 				gotoxy(20, 14);
-// 				cin >> temp->soluongcanmua;
-// 				if (temp->getSoLuong() < temp->soluongcanmua)
-// 				{
-// 					gotoxy(18, 18);
-// 					cout << "SO LUONG CAN MUA VUOT QUA SO LUONG CO TRONG KHO VUI LONG NHAP LAI";
-// 				}
-// 				else if (temp->soluongcanmua <= 0)
-// 				{
-// 					gotoxy(18, 18);
-// 					cout << "SO LUONG CAN MUA PHAI LON HON HOAC BANG 1";
-// 				}
-// 				else
-// 				{
-// 					gotoxy(18, 18);
-// 					cout << "CHON SAN PHAM THANH CONG VUI LONG XEM O GIO HANG";
-// 				}
-
-// 			} while (temp->getSoLuong() < temp->soluongcanmua || temp->soluongcanmua <= 0);
-// 			break;
-// 		}
-// 		i++;
-// 		temp = temp->next;
-// 	}
-// }
-
 void sapxep(int x, int y, node *head, int sobang)
 {
 	//	node *head;
@@ -903,9 +888,10 @@ void thanhsangMenuCuaXemThongTinRuou(int x, int y)
 		}
 	}
 }
+// sắp xếp chọn
 void XapXepTheoNongdo(int x, int y, node *&head)
 {
-	node *current = head, *index = NULL;
+	node *current = head, *index = NULL, *min = NULL;
 	int temp;
 
 	if (head == NULL)
@@ -916,23 +902,22 @@ void XapXepTheoNongdo(int x, int y, node *&head)
 	{
 		while (current != NULL)
 		{
-			// Node index will point to node next to current
+			min = current;
 			index = current->next;
-
 			while (index != NULL)
 			{
-				// If current node's data is greater than index's node data, swap the data between them
-				if (current->data.nongdo > index->data.nongdo)
+				if (min->data.nongdo > index->data.nongdo)
 				{
-					swapdata(current, index);
+					min = index;
 				}
+				swapdata(min, index);
 				index = index->next;
 			}
 			current = current->next;
 		}
 	}
 }
-void XapXepTheoDungTich(int x, int y, node *&head)
+void XapXepTheoDungTich(int x, int y, node *&head) // sắp xếp chèn
 {
 	node *current = head, *index = NULL;
 	int temp;
@@ -946,14 +931,15 @@ void XapXepTheoDungTich(int x, int y, node *&head)
 		while (current != NULL)
 		{
 			index = current->next;
-
+			node *j = current;
 			while (index != NULL)
 			{
-				// If current node's data is greater than index's node data, swap the data between them
-				if (current->data.dungtich > index->data.dungtich)
+				while (j != NULL && j->data.dungtich > index->data.dungtich)
 				{
-					swapdata(current, index);
+					index->data.dungtich = j->data.dungtich;
+					j = j->next;
 				}
+				j = index;
 				index = index->next;
 			}
 			current = current->next;
@@ -1037,11 +1023,11 @@ void DocDuLieuTuFile(int x, int y, node *&head, int &sobang)
 		getline(inFile, temp);
 		fflush(stdin);
 		a->data.soluong = atoll((char *)temp.c_str());
-		//
-		getline(inFile, temp, ':');
-		getline(inFile, temp);
-		fflush(stdin);
-		a->soluongcanmua = atoll((char *)temp.c_str());
+
+		// getline(inFile, temp, ':');
+		// getline(inFile, temp);
+		// fflush(stdin);
+		// a->soluongcanmua = atoll((char *)temp.c_str());
 		getline(inFile, temp);
 		//
 		a->next == NULL;
